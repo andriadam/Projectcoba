@@ -1,0 +1,655 @@
+/* font mont */
+@font-face {
+    font-family: 'mont';
+    src: url(../font/Montserrat-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'montsb';
+    src: url(../font/Montserrat-SemiBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'montm';
+    src: url(../font/Montserrat-Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'montl';
+    src: url(../font/Montserrat-Light.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'monti';
+    src: url(../font/Montserrat-Italic.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'montel';
+    src: url(../font/Montserrat-ExtraLight.woff) format('woff');
+}
+
+/* font lora */
+@font-face {
+    font-family: 'lora';
+    src: url(../font/Lora-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'loram';
+    src: url(../font/Lora-Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'lorab';
+    src: url(../font/Lora-Bold.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background-color: #181E1F;
+}
+
+/* navbar */
+.navbar {
+    background-color: #111111;
+}
+
+.navbar a {
+    color: white;
+    font-family: 'montl';
+    font-size: 16px;
+
+}
+
+.nav-link:hover {
+    font-weight: bold;
+    font-size: 16px;
+    color: #BA9031;
+    box-shadow: 0px 18px 0px -15px #BA9031;
+    box-sizing: border-box;
+}
+
+.navbar a.navbar-brand {
+    font-family: 'lorab';
+    font-size: 28px;
+    color: #BA9031;
+}
+
+
+/* Jumbotron */
+.jumbotron {
+    height: 600px;
+    background-image: url(../img/jumbotron/header.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.jumbotron .logo {
+    margin: 50px auto;
+}
+
+.btn-booking:hover {
+    transition: 0.3s;
+}
+
+.btn-booking:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.301);
+}
+
+h1 {
+    width: 812px;
+    text-align: center;
+    font-family: 'mont';
+    font-size: 42px;
+    color: white;
+    margin: 0 auto;
+}
+
+h1 span {
+    font-family: 'montsb';
+}
+
+/* J. Buka */
+.kotak .col-8 {
+    margin: 0 auto;
+    margin-top: -150px;
+    height: 210px;
+    background-color: #171717;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+h2 {
+    font-family: 'loram';
+    font-size: 28px;
+    color: #BA9031;
+}
+
+
+.buka h2 {
+    margin-top: 30px;
+}
+
+.buka .jam .col p:first-child {
+    margin-top: 15px;
+    font-family: 'mont';
+    font-size: 26px;
+}
+
+.buka .jam .col p:last-child {
+    font-family: 'montel';
+    font-size: 22px;
+    /* margin-left: 20px; */
+}
+
+
+.buka .line-s {
+    width: 170px;
+    height: 2px;
+    background-image: url(../img/jumbotron/Line\ 13.png);
+    background-size: cover;
+    margin: 0 auto;
+}
+
+/* Mengapa */
+h3 {
+    font-family: 'loram';
+    font-size: 28px;
+    color: #BA9031;
+}
+
+h5 {
+    /* font-weight: bold; */
+    font-family: 'montm';
+    font-size: 24px;
+    margin: 10px;
+}
+
+.mengapa .col p {
+    font-family: 'montel';
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.why {
+    opacity: 0;
+    transition: 1s;
+    transform: translate(50%) rotate(45deg) skew(45deg);
+}
+
+.mengapa_muncul {
+    opacity: 1;
+    transform: translate(0%) rotate(0) skew(0);
+}
+
+.mengapa .icon .col {
+    transition: 0.3s;
+}
+
+.mengapa .icon .col:hover {
+    transform: scale(1.2);
+}
+
+
+/* Melihat */
+section.galeri {
+    height: 600px;
+    background-image: url(../img/melihat/Group\ 11.png);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: auto;
+
+}
+
+.galeri .img-thumbnail {
+    opacity: 0;
+    transition: 1s;
+    transform: translate(0px, -40px);
+}
+
+.galeri .img-thumbnail.muncul {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    transform: scale(0);
+    transition: 0.5s;
+    padding: 100px;
+    text-align: center;
+}
+
+.overlay:target {
+    display: inline-block;
+    transform: scale(1);
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay img {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.max{
+    height: 300px;
+    width: 500px;
+    margin-top: 10px;
+}
+
+.overlay:target img {
+    animation: zoom 0.3s;
+ 
+}
+
+.overlay .close {
+    font-size: 20px;
+    top: 50px;
+    left: 48%;
+    color: white;
+}
+
+.overlay:target .close {
+    animation: down .5s .5s forwards;
+}
+
+/* .overlay .next {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 50%;
+    right: 18%;
+    margin-left: 40px;
+}
+
+.overlay .prev {
+    display: inline-block;
+
+    position: fixed;
+    top: 50%;
+    left: 18%;
+    margin-right: 40px;
+} */
+
+.overlay:target {
+    animation: zoom 1s forwards;
+}
+
+@keyframes zoom {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Kata mereka */
+
+
+section.kata-mereka .col-4 {
+    height: 400px;
+    background-color: #0F1213;
+    border: 1px solid black
+}
+
+section.kata-mereka blockquote p:nth-child(1) {
+    font-family: 'monti';
+    font-size: 18px;
+}
+
+section.kata-mereka blockquote p:nth-child(3) {
+    font-family: 'montsb';
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+section.kata-mereka blockquote p:nth-child(4) {
+    font-family: 'montel';
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+/* Harga pangkas */
+section.harga-pangkas {
+    height: 600px;
+    background-image: url(../img/harga/tembok.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* section.harga-pangkas .jenis p:nth-child(1) {
+    font-family: 'mont';
+    font-size: 28px;
+    text-shadow: 0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #fff,
+        0 0 10px #FF0000 0 0 20px #FF0000 0 0 30px #FF0000 0 0 40px #FF0000 0 0 50px #FF0000 0 0 60px #FF0000 0 0 70px #FF0000 0 0 80px #FF0000 0 0 90px #FF0000 0 0 100px #FF0000;
+} */
+
+section.harga-pangkas .jenis-1 img {
+    margin-top: -150px;
+}
+
+section.harga-pangkas .jenis-2 img {
+    margin-top: -172px;
+}
+
+section.harga-pangkas .jenis-2 img:first-child {
+    margin-top: -150px;
+}
+
+section.harga-pangkas .booking {
+    margin-top: -130px;
+}
+
+/* Kapster */
+section.kapster .kap {
+    height: 346px;
+    background-image: url(../img/kapster/Group\ 16.png);
+    background-size: cover;
+}
+
+section.kapster .kap img:nth-child(2) {
+    /* margin-left: -50px; */
+}
+
+
+/* Produk */
+section.produk h4 {
+    font-family: 'montm';
+    font-size: 20px;
+}
+
+section.produk .desk p {
+    font-family: 'montl';
+    font-size: 14px;
+}
+
+section.produk .harga p {
+    font-family: 'montl';
+    font-size: 20px;
+}
+
+section.produk .figure-img {
+    display: relative;
+
+}
+
+/* Overlay */
+.figure-img a {
+    top: 0;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.figure-img:hover a {
+    opacity: 1;
+}
+
+section.produk figure:hover h4 {
+    color: #BA9031;
+}
+
+section.produk figure:hover p {
+    color: #00AC0B;
+}
+
+/* lokasi */
+section.lokasi {
+    height: 600px;
+    background-image: url(../img/lokasi/back-lokasi.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.lokasi p {
+    font-family: 'montm';
+    font-size: 20px;
+
+}
+
+section.lokasi span {
+    margin-right: 50px;
+}
+
+/* footer */
+footer {
+    border-top: 2px solid #BA9031;
+}
+
+footer .all-right {
+    font-family: 'montm';
+    color: #A7A7A7;
+
+}
+
+.line-title {
+    opacity: 0;
+    transform: rotate(90deg) translate(0, 900px);
+    transition: 1s;
+}
+
+.line-title.muncul {
+    opacity: 1;
+    transform: rotate(0deg) translate(0, 0)
+}
+
+/* wa */
+.wa, .wa img{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 10px;
+    left: 15px; 
+    border-radius: 20%; 
+    z-index: 999;  
+}
+
+/* top */
+.top img{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 10px;
+    right: 15px; 
+    z-index: 999;  
+}
+
+
+
+/* Kaps */
+
+section.kaps .figure-img a {
+    top: 0;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+section.kaps .figure-img:hover a {
+    opacity: 1;
+}
+
+h5 {
+    font-size: 16px;
+}
+section.kaps figure.figure:hover h5 {
+    color: #BA9031;
+}
+
+section.kaps figure.figure img {
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+section.kaps figure.figure:hover .kaps {
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #BA9031, inset 0 0 8px 3px rgba(0, 0, 0, 0.1);
+    ;
+}
+
+
+
+
+
+@media (max-width: 575.98px) {
+    .jumbotron {
+        background-image: url(../img/jumbotron/header.png);
+    }
+
+    .jumbotron h1 {
+        font-size: 32px;
+        width: 575px;
+        margin-left: -30px;
+    }
+
+    .jumbotron h1 span {}
+
+    .buka h2 {
+        margin-top: 10px;
+    }
+
+    section.lokasi p {
+        font-family: 'montm';
+        font-size: 20px;
+        text-align: left;
+    }
+
+    section.lokasi span {
+        margin-right: 120px;
+        margin-left: 40px;
+    }
+
+    section.harga-pangkas .jenis-1 img:first-child {
+        margin-left: -150px;
+    }
+
+    section.harga-pangkas .jenis-1 img:last-child {
+        margin-left: -90px;
+    }
+
+
+    section.harga-pangkas .jenis-2 img:first-child {
+        margin-left: -90px;
+    }
+
+    section.harga-pangkas .jenis-2 img:last-child {
+        margin-left: -60px;
+        margin-top: -175px;
+    }
+
+    section.harga-pangkas .jenis-2 img:nth-child(2) {
+        margin-left: -30px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .jumbotron {
+        background-position-x: center;
+    }
+
+
+    .jumbotron h1 {
+        font-size: 38px;
+        width: 575px;
+        margin-left: -10px;
+    }
+
+    section.lokasi p {
+        font-family: 'montm';
+        font-size: 20px;
+        text-align: left;
+    }
+
+    section.lokasi span {
+        margin-right: 0px;
+        margin-left: 88px;
+    }
+
+    section.harga-pangkas .jenis-1 img:first-child {
+        margin-left: -150px;
+    }
+
+    section.harga-pangkas .jenis-1 img:last-child {
+        margin-left: -140px;
+    }
+
+    section.harga-pangkas .jenis-1 img:nth-child(2) {
+        margin-left: -90px;
+    }
+
+    section.harga-pangkas .jenis-2 img:first-child {
+        margin-left: -90px;
+    }
+
+    section.harga-pangkas .jenis-2 img:last-child {
+        margin-left: -60px;
+        margin-top: -175px;
+    }
+
+    section.harga-pangkas .jenis-2 img:nth-child(2) {
+        margin-left: -30px;
+    }
+
+    footer .all-right {
+        font-size: 16px;
+    }
+}
+
+/* @media (min-width: 1199.98px) {
+    .jumbotron {
+        background-position-x: 500;
+    }
+
+    .jumbotron h1 {
+        font-size: 42px;
+        margin-left: 50px;
+    }
+
+    section.harga-pangkas .jenis-1 img:first-child {
+        margin-left: -60px;
+    }
+
+    section.lokasi p {
+        font-family: 'montm';
+        font-size: 20px;
+        text-align: center;
+    }
+
+    section.lokasi span {
+        margin-right: 0px;
+        margin-left: 88px;
+    }
+} */
